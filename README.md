@@ -127,7 +127,7 @@ The fastest way to see the whole pipeline is
 stages on **10 MoreHopQA cases**, writing every intermediate artifact to
 `output/`, and uses **relative paths only** so it works straight after cloning.
 
-Stages that need a GPU or an API key are clearly marked and **gated** — if the
+Stages that need a GPU or an API key are clearly marked and **gated**. If the
 requirement is missing, the cell explains what to do and the notebook continues.
 The final evaluation cell always produces real numbers because it can fall back
 to the pre-computed results bundled in `data/MorehopQA/Phi4/`.
@@ -260,7 +260,13 @@ explicitly (handy for the bundled paper results):
 
 ```bash
 python src/evaluation/evaluation_metrics.py \
-    --label-file     data/MorehopQA/Phi4/evaluation.json \
+    --label-file     data/MorehopQA/Phi4/evaluation.json Can you please provide me with access to this document?
+
+
+
+
+
+
     --gib-file       data/MorehopQA/Phi4/GIBS_results.json \
     --nibs-file      data/MorehopQA/Phi4/NIBS_results.json \
     --ptrue-file     data/MorehopQA/Phi4/ptrue_phi4_morehopqa_.pkl \
