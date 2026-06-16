@@ -128,9 +128,9 @@ stages on **10 MoreHopQA cases**, writing every intermediate artifact to
 `output/`, and uses **relative paths only** so it works straight after cloning.
 
 Stages that need a GPU or an API key are clearly marked and **gated**. If the
-requirement is missing, the cell explains what to do and the notebook continues.
+requirement is missing, the cell explains what to do, and the notebook continues.
 The final evaluation cell always produces real numbers because it can fall back
-to the pre-computed results bundled in `data/MorehopQA/Phi4/`.
+to the pre-computed results bundled in `data/MorehopQA/Deepseek/`.
 
 ```bash
 pip install jupyter
