@@ -104,14 +104,14 @@ mamba activate reasoning
 pip install -r requirements.txt
 ```
 
-> `torch` / `vllm` are CUDA builds (target CUDA 12.x) — install them on a GPU node.
+> `torch` / `vllm` are CUDA builds (target CUDA 12.x), install them on a GPU node.
 > The CPU-only stages (2, 6, and 3 with `--device cpu`) need just numpy / scikit-learn /
 > torch / transformers, so a CPU box is enough to try those.
 
 Hardware / access notes:
 
 - **Stage 1 (generation)** needs a CUDA GPU and `vllm`, plus access to the base
-  model on HuggingFace (e.g. `meta-llama/Llama-3.1-8B-Instruct`, which is gated —
+  model on HuggingFace (e.g. `meta-llama/Llama-3.1-8B-Instruct`, which is gated, so
   run `huggingface-cli login` first).
 - **Stages 3, 5 (BERT / NIBS / GIBS / baselines)** use GPUs but can fall back to
   CPU for tiny demos (`--device cpu`). NIBS/MCS load `microsoft/deberta-large-mnli`.
