@@ -254,9 +254,6 @@ its step scores against the `evaluation.json` labels.
 python src/evaluation/evaluation_metrics.py --dataset morehopqa --model llama
 ```
 
-`--dataset`/`--model` auto-derive every input path. You can instead pass them
-explicitly (handy for the bundled paper results):
-
 ```bash
 python src/evaluation/evaluation_metrics.py \
     --label-file     data/MorehopQA/Phi4/evaluation.json 
@@ -286,17 +283,7 @@ To add/adjust a dataset (prompt, source format, answer extraction), edit
 
 ---
 
-## 6. Argument conventions cheat-sheet
-
-| Stage / script | dataset flag values | model flag values |
-| --- | --- | --- |
-| dataset stages, gpt_eval, evaluation_metrics | `morehopqa`, `gsm8k`, `math` | `llama`, `deepseek`, `phi4` |
-| `baseline/p_true.py` (`--dataset`/`--model`) | `morehopqa`, `gsm8k`, `math` | `llama3`, `phi4`, `deepseek` |
-| `baseline/white_box_baseline.py` (`--model-name`) | — | `llama3`, `phi4`, `deepseek` |
-
----
-
-## 7. Troubleshooting
+## 6. Troubleshooting
 
 - **`FileNotFoundError: output/...`** — run scripts from the repository root, or
   pass `--output-root /abs/path`.
@@ -310,7 +297,7 @@ To add/adjust a dataset (prompt, source format, answer extraction), edit
 
 ---
 
-## 8. Citation
+## 7. Citation
 
 If you use this code, please cite:
 
